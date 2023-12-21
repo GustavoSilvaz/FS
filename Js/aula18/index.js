@@ -16,3 +16,15 @@ if (hora>= 0 && hora <= 11) {
 } else {
     console.log("Horario no válido");
 }
+
+const numero = 7;
+
+if (numero>=0 && numero <=5) {
+    console.log("O número é maior ou igual a cinco");
+} else if (numero===numero) {
+    console.log("O número é aaaa")
+}  else if (numero>6) {
+    console.log("O número é verdadeiro")
+} else {
+    console.log("O número não está na lista")
+}
