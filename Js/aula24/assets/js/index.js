@@ -1,5 +1,4 @@
-const h1 = document.querySelector(".container h1");
-const data = new Date();
+
 
 //pega o container e a Date
 
