@@ -1,3 +1,2 @@
 let nome = 'guz'
 
-var 
