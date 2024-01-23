@@ -11,7 +11,7 @@ funcao(1,2,3);
 
 function contas (operador, acumulador, ...numeros) {
     for (let numero of numeros) {
-        if acumuladora += numero;
+        if (acumuladora += numero);
         
     }
     console.log(acumuladora);
