@@ -1,11 +1,12 @@
 const numeros = [1,2,3,4,5,6,7,8,9,0];
 
-const total = numeros.reduce(function(acumulador, valor, indice, array){
-    acumulador += valor;
-    return acumulador;
-},[])
+const numerospares = numeros
+.filter(valor=> valor % 2===0)
+.map(valor=> valor * 2)
+.reduce((ac, valor)=> ac + valor);
 
-console.log(total);
+
+console.log(numerospares);
 
 
 /* const pessoas = [
