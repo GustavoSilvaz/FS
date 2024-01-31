@@ -1,6 +1,17 @@
-const a1 = [1,2,3,4,5,6,7,8,9]
-let total = 0;
-a1.forEach(valor=> {
-    total += valor;
-});
-console.log(total)
+const pessoa ={
+    nome: 'Luiz',
+    sobrenome: 'Otavio',
+};
+
+const chave = 'nome';
+console.log(pessoa.nome)
+console.log(pessoa["sobrenome"])
+console.log(pessoa[chave])
+
+const mano = new Object();
+mano.nome = 'Guzman'
+mano.sobrenome = "Young"
+
+delete mano.sobrenome
+
+console.log(mano)
