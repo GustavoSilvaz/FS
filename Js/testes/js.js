@@ -1,2 +1,6 @@
-const a = soma = (x,y) => x + y;
-console.log(soma(5,6));
+let pn = n => {
+    if(n % 2 == 0) return true;
+}
+
+
+console.log(pn(3));
