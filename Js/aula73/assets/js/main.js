@@ -1,4 +1,4 @@
-const request = obj => {
+/* const request = obj => {
     return new Promise((resolve, reject) => {
         const xhr = new  XMLHttpRequest();
     xhr.open(obj.method, obj.url, true)
@@ -12,7 +12,7 @@ const request = obj => {
         }
     });
     });
-};
+} */
 
 document.addEventListener('click', e => {
     const el = e.target;
@@ -24,25 +24,23 @@ document.addEventListener('click', e => {
     }
 })
 
-async function carregaPagina(el) {
+ async function carregaPagina(el) {
     const href = el.getAttribute("href")
-    
-    const objConfig = {
-        method: "GET",
-        url: href
+    const response = await fetch(href);
+    if(response.status !== 200) throw new Error("Erro 404");
+    const html = await response.text();
+    carregaResultado(html);
     }
-
-    try {
-        const response = await request(objConfig)
-    carregaResultado(response)
-    } catch(e){
-        console.log(e)
-    }
-
-    
-}
 
 function carregaResultado(response){
     const resultado = document.querySelector(".resultado")
     resultado.innerHTML=  response;
 }
+
+fetch('pagina1.html')
+.then(resposta => {
+    if(resposta.status !== 200) throw new Error("erro 404 nosso");
+    return resposta.text();
+})
+.then(html => console.log(html))
+.catch(e => console.log(e))
