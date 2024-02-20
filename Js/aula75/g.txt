@@ -1,1 +1,0 @@
- npm install --save-dev @babel/cli babel/preset-env @babel/core
