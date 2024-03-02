@@ -20,7 +20,7 @@ function carregaElementosNaPagina(json) {
         
 
         td = document.createElement('td')
-        td.innerHTML=pessoa.salario;
+        td.innerHTML=pessoa.salario;]
         tr.appendChild(td);
 
         console.log(pessoa.nome)
