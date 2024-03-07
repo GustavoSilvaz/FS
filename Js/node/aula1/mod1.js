@@ -1,17 +1,26 @@
-/* const nome = 'Luiz';
-const sobrenome = 'Miranda';
+/* const nome = 'Cristiano';
+const sobrenome = 'Ronaldo';
+const idade = 35;
+const falaNome = () => nome+' '+sobrenome
 
-const falanome = () => nome + ' ' + sobrenome;
-
-/* 
-module.exports.nome = nome;
-module.exports.sobrenome = sobrenome;
-module.exports.falanome = falanome;  */
+exports.nome=nome;
+exports.sobrenome=sobrenome;
+exports.falaNome=falaNome;
+this.qualquercoisa="O que eu quiser exportar"; */
 
 class Pessoa {
     constructor(nome) {
         this.nome = nome;
     }
 }
+/* module.exports.nome = 'Luiz'
+exports.Pessoas = Pessoas
+this.sobrenome= 'Qualquer coisa' */
 
-exports.Pessoa = Pessoa;
+const nome = 'Luiz'
+const sobrenome = 'Miranda'
+
+module.exports = {
+    nome, sobrenome, Pessoa
+}
+
