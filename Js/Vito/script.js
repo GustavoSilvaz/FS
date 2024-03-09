@@ -1,0 +1,52 @@
+// Seleciona o elemento HTML com o ID "slider" e armazena-o em uma variável.
+let sliderElement = document.querySelector("#slider");
+
+// Seleciona o elemento HTML com o ID "button" e armazena-o em uma variável.
+let buttonElement = document.querySelector("#button");
+
+// Seleciona o elemento HTML com o ID "valor" e armazena-o em uma variável.
+let sizePassword = document.querySelector("#valor");
+
+// Seleciona o elemento HTML com o tipo "password" e armazena-o em uma variável.
+let password = document.querySelector("password");
+
+// Seleciona o elemento HTML com o ID "container-password" e armazena-o em uma variável.
+let containerPassoword = document.querySelector("#container-password");
+
+// Define uma string de caracteres que podem ser usados na senha.
+let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!";
+
+// Inicializa a variável "novasenha" como uma string vazia.
+let novasenha = "";
+
+// Define o valor inicial do tamanho da senha no elemento HTML com o ID "valor".
+sizePassword.innerHTML = sliderElement.value;
+
+// Adiciona um event listener para o evento "input" no elemento "sliderElement".
+sliderElement.oninput = function() {
+   // Atualiza o valor do tamanho da senha no elemento HTML com o ID "valor".
+   sizePassword.innerHTML = this.value;
+}
+
+// Define uma função "generatePassword()" que gera uma senha aleatória com base no tamanho definido no "sliderElement".
+function generatePassword() {
+   
+   let pass = "";
+   
+   // Gera uma senha aleatória com base no tamanho definido no "sliderElement".
+   for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
+       pass += charset.charAt(Math.floor(Math.random() * n));
+       
+   }
+   
+   // Mostra o contêiner da senha e atualiza o valor do elemento HTML com o ID "password" com a senha gerada.
+   containerPassoword.classList.remove("hide");
+   password.innerHTML = pass;
+   novasenha = pass;
+}
+
+// Define uma função "copyPassword()" que copia a senha gerada para a área de transferência do sistema.
+function copyPassword(){
+   alert("senha copiada com sucesso")
+   // Copia a senha gerada para a área de transferência do sistema usando a API "navigator.clipboard.writeText()".
+   navigator.clipboard.writeText(novaSenha);}
