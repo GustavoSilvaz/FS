@@ -1,12 +1,17 @@
 const nome = 'Luiz';
 const sobrenome = "miranda";
 
-const falaNonme = functin () => {
-    console.log(nome, sobrenome)
+const falaNome = () => {
+    console.log(nome, sobrenome);
 };
 
-console.log(module)
+/* module.exports.nome = nome
+module.exports.sobrenome = sobrenome
+module.exports.falaNome = falaNome */
 
-module.exports.nome = nome:
+exports.nome = nome 
+exports.sobrenome = sobrenome
+exports.falaNome = falaNome
+this.qualquerCoisa = 'O que eu quiser rxportar.'
 
-console.log(module.exports);
+console.log(exports)
